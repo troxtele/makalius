@@ -1,0 +1,180 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-col: #443857;
+  --white: #ffffff;
+  --border-color: #e8f1f4;
+  --light-gray: #fafafa;
+  --blue: #41c0f0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+  color: var(--text-col);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-col);
+}
+
+img {
+  max-width: 30rem;
+}
+
+section {
+  padding: 2.5rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding: 0 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.sections-wrapper {
+  margin: 4rem;
+  border: 12px solid var(--border-color);
+}
+
+// Main Section
+.main {
+  .wrapper {
+  }
+
+  .heading {
+    margin-bottom: 1.5rem;
+  }
+  .top-content {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .left {
+    img {
+      max-width: 300px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+      padding: 0.5rem;
+    }
+  }
+
+  .right {
+    display: grid;
+    gap: 2rem;
+  }
+  .top,
+  .middle,
+  .bottom {
+    padding: 1.5rem;
+    border-top: 2px solid var(--border-color);
+    background-color: var(--light-gray);
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .item {
+    img {
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid var(--blue);
+      }
+    }
+  }
+
+  // middle
+  .prices {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.3rem;
+    font-weight: 700;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--blue);
+      color: var(--white);
+    }
+  }
+
+  .text-area {
+  }
+
+  // Bottom
+  .form-control {
+    resize: none;
+    border: solid 1px #d4d4d4;
+    color: #888;
+    width: 100%;
+    height: 6rem;
+    color: #555;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: 0.3s ease-in-out;
+    outline: none;
+    padding: 1rm;
+
+    &:focus {
+      border: 1px solid var(--blue);
+    }
+  }
+
+  .text {
+    font-size: 0.85rem;
+    font-weight: 400;
+
+    .blue {
+      color: var(--blue);
+    }
+  }
+}
